@@ -265,140 +265,346 @@ section{
     }
     }
 
-    @media (max-width: 768px) {
+    img{
+    max-width:100%;
+    height:auto;
+}
 
-    body{
-        overflow-x: hidden;
-        overflow-y: auto;
-    }
+button{
+    cursor:pointer;
+}
+
+@media (max-width:1400px){
 
     header{
-        width: 100%;
-        left: 0;
-        transform: none;
-        grid-template-columns: 1fr;
-        justify-items: center;
-        gap: 15px;
-        padding: 20px 15px;
-    }
-
-    header img{
-        width: 170px;
-    }
-
-    header nav ul{
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        flex-wrap: wrap;
-    }
-
-    section{
-        overflow: hidden;
+        width:90vw;
+        grid-template-columns:1fr 450px;
+        gap:40px;
     }
 
     section .list{
-        width: 100%;
-        padding: 0 20px;
-    }
-
-    section .list::before{
-        display: none;
-    }
-
-    section .list .item .car-img{
-        width: 100%;
-        top: 22%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: flex;
-        justify-content: center;
-    }
-
-    section .list .item .car-img::before{
-        width: 70%;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 105%;
-        height: 50px;
-        filter: blur(30px);
-    }
-
-    section .list .item .car-img img{
-        width: 90%;
-        max-width: 360px;
-        transform: rotate(-15deg);
-    }
-
-    section .list .item.active .car-img img{
-        transform: rotate(-15deg);
-    }
-
-    section .list .item .content{
-        width: 100%;
-        right: 0;
-        left: 0;
-        top: 48%;
-        padding: 20px;
-        align-items: center;
-        text-align: center;
-    }
-
-    section .list .item .content .car-information{
-        font-size: 14px;
+        width:85vw;
     }
 
     section .list .item .content h2{
-        font-size: 3.5rem;
-        text-align: center;
-        line-height: 1;
+        font-size:7rem;
+    }
+
+}
+
+@media (max-width:1200px){
+
+    header{
+        width:95vw;
+        grid-template-columns:1fr 350px;
+    }
+
+    header img{
+        width:200px;
+    }
+
+    header nav ul{
+        grid-template-columns:repeat(3,120px);
+    }
+
+    section .list{
+        width:90vw;
+    }
+
+    section .list .item .car-img{
+        width:60%;
+    }
+
+    section .list .item .content{
+        width:45%;
+        right:20px;
+    }
+
+    section .list .item .content h2{
+        font-size:6rem;
+    }
+
+}
+
+@media (max-width:992px){
+
+    body{
+        overflow-x:hidden;
+        overflow-y:auto;
+    }
+
+    header{
+        position:absolute;
+        width:100%;
+        left:0;
+        transform:none;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        gap:15px;
+        padding:20px;
+    }
+
+    header nav ul{
+        display:flex;
+        gap:25px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    section{
+        min-height:100vh;
+        height:auto;
+        padding-top:140px;
+        padding-bottom:120px;
+    }
+
+    section .list{
+        width:100%;
+        display:flex;
+        justify-content:center;
+    }
+
+    section .list::before{
+        display:none;
+    }
+
+    section .list .item{
+
+        display:flex;
+        flex-direction:column;
+        justify-content:flex-start;
+        align-items:center;
+
+    }
+
+    section .list .item .car-img{
+
+        position:relative;
+        width:90%;
+        top:0;
+        left:0;
+        transform:none;
+        display:flex;
+        justify-content:center;
+        margin-top:20px;
+
+    }
+
+    section .list .item .car-img::before{
+
+        width:60%;
+        left:50%;
+        transform:translateX(-50%);
+        top:95%;
+        height:40px;
+
+    }
+
+    section .list .item .car-img img{
+
+        width:85%;
+        max-width:500px;
+        transform:rotate(-15deg);
+
+    }
+
+    section .list .item.active .car-img img{
+
+        transform:rotate(-15deg);
+
+    }
+
+    section .list .item .content{
+
+        position:relative;
+        width:90%;
+        right:auto;
+        height:auto;
+        align-items:center;
+        text-align:center;
+        margin-top:20px;
+
     }
 
     section .list .item .content .description{
-        max-width: 100%;
-        text-align: center;
-        font-size: 13px;
+
+        text-align:center;
+        max-width:700px;
+
     }
 
-    section .list .item .content .information{
-        width: 180px;
-        height: 45px;
-        font-size: 14px;
+    section .list .item .content h2{
+
+        font-size:clamp(3rem,7vw,5rem);
+
     }
 
     .arrows{
-        width: 90%;
-        top: 87%;
-    }
 
-    .arrows button{
-        width: 45px;
-        height: 45px;
-    }
+        width:95%;
+        top:auto;
+        bottom:90px;
 
-    .arrows button img{
-        width: 24px;
     }
 
     .indicators{
-        width: 100%;
-        height: auto;
-        top: auto;
-        bottom: 25px;
-        left: 50%;
-        transform: translateX(-50%);
-        align-items: center;
+
+        width:100%;
+        height:auto;
+        top:auto;
+        bottom:20px;
+        left:50%;
+        transform:translateX(-50%);
+        align-items:center;
+
     }
 
     .indicators .number{
-        font-size: 3rem;
+
+        font-size:3rem;
+
     }
 
-    .indicators ul{
-        justify-content: center;
+}
+
+@media (max-width:768px){
+
+    header img{
+
+        width:170px;
+
     }
 
-    .indicators ul li{
-        width: 35px;
+    header nav ul{
+
+        gap:18px;
+        font-size:14px;
+
     }
+
+    section{
+
+        padding-top:130px;
+
+    }
+
+    section .list .item .car-img img{
+
+        width:95%;
+
+    }
+
+    section .list .item .content h2{
+
+        font-size:3.5rem;
+
+    }
+
+    section .list .item .content .description{
+
+        font-size:13px;
+
+    }
+
+    .information{
+
+        width:170px;
+        height:45px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    header{
+
+        padding:15px;
+
+    }
+
+    header img{
+
+        width:140px;
+
+    }
+
+    header nav ul{
+
+        gap:15px;
+        font-size:13px;
+
+    }
+
+    section{
+
+        padding-top:120px;
+
+    }
+
+    section .list .item .car-img{
+
+        width:100%;
+
+    }
+
+    section .list .item .car-img img{
+
+        width:100%;
+        max-width:320px;
+
+    }
+
+    section .list .item .content{
+
+        width:95%;
+
+    }
+
+    section .list .item .content h2{
+
+        font-size:2.8rem;
+
+    }
+
+    section .list .item .content .description{
+
+        font-size:12px;
+
+    }
+
+    .information{
+
+        width:150px;
+        height:42px;
+
+    }
+
+    .arrows{
+
+        bottom:75px;
+
+    }
+
+    .arrows button{
+
+        width:42px;
+        height:42px;
+
+    }
+
+    .indicators{
+
+        bottom:15px;
+
+    }
+
+    .indicators .number{
+
+        font-size:2.2rem;
+
+    }
+
 }
