@@ -264,3 +264,141 @@ section{
         }
     }
     }
+
+    @media (max-width: 768px) {
+
+    body{
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    header{
+        width: 100%;
+        left: 0;
+        transform: none;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 15px;
+        padding: 20px 15px;
+    }
+
+    header img{
+        width: 170px;
+    }
+
+    header nav ul{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    section{
+        overflow: hidden;
+    }
+
+    section .list{
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    section .list::before{
+        display: none;
+    }
+
+    section .list .item .car-img{
+        width: 100%;
+        top: 22%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+    }
+
+    section .list .item .car-img::before{
+        width: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 105%;
+        height: 50px;
+        filter: blur(30px);
+    }
+
+    section .list .item .car-img img{
+        width: 90%;
+        max-width: 360px;
+        transform: rotate(-15deg);
+    }
+
+    section .list .item.active .car-img img{
+        transform: rotate(-15deg);
+    }
+
+    section .list .item .content{
+        width: 100%;
+        right: 0;
+        left: 0;
+        top: 48%;
+        padding: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    section .list .item .content .car-information{
+        font-size: 14px;
+    }
+
+    section .list .item .content h2{
+        font-size: 3.5rem;
+        text-align: center;
+        line-height: 1;
+    }
+
+    section .list .item .content .description{
+        max-width: 100%;
+        text-align: center;
+        font-size: 13px;
+    }
+
+    section .list .item .content .information{
+        width: 180px;
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .arrows{
+        width: 90%;
+        top: 87%;
+    }
+
+    .arrows button{
+        width: 45px;
+        height: 45px;
+    }
+
+    .arrows button img{
+        width: 24px;
+    }
+
+    .indicators{
+        width: 100%;
+        height: auto;
+        top: auto;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+        align-items: center;
+    }
+
+    .indicators .number{
+        font-size: 3rem;
+    }
+
+    .indicators ul{
+        justify-content: center;
+    }
+
+    .indicators ul li{
+        width: 35px;
+    }
+}
